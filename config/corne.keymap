@@ -135,10 +135,10 @@
                 mods = <MOD_LSFT>;
             };
 
-            td_comma: mod_OE {
+            td_comma: mod_UE {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
-                bindings = <&mcr_oe>, <&mcr_OEc>;
+                bindings = <&mcr_ue>, <&mcr_UEc>;
                 mods = <MOD_LSFT>;
             };
         };
@@ -188,8 +188,8 @@
 
                 alt_layer {
 // -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |     |   |     |     |     |     |     |      |
-// |     |     |     |     |     |     |   |     |     |     |     |     |      |
+// |     |     |     |     |     |     |   |     |  ue |     | oe  |     |      |
+// |     |   ae|  ss |     |     |     |   |     |     |     |     |     |      |
 // |     |     |     |     |     |     |   |     |     |     |     |     |      |
 //                   |     |     |     |   |     |     |     |
                         bindings = <
