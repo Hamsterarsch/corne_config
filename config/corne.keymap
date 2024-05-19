@@ -121,21 +121,21 @@
                 bindings = <&kp COMMA>, <&kp DOWN>;
             };
 
-            td_comma: mod_AE {
+            mod_AE: mod_AE {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
                 bindings = <&mcr_ae>, <&mcr_AEc>;
                 mods = <MOD_LSFT>;
             };
 
-            td_comma: mod_OE {
+            mod_OE: mod_OE {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
                 bindings = <&mcr_oe>, <&mcr_OEc>;
                 mods = <MOD_LSFT>;
             };
 
-            td_comma: mod_UE {
+            mod_UE: mod_UE {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
                 bindings = <&mcr_ue>, <&mcr_UEc>;
