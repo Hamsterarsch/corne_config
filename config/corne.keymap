@@ -87,7 +87,7 @@
                 , <&macro_release &kp LALT>
                 ;
         )
-    }
+    };
 
      behaviors {
             td_shftl: tap_dance_shiftlock {
