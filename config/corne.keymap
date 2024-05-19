@@ -18,7 +18,7 @@
 
 / {
     macros {
-        ZMK_MACRO(mcr_AE,
+        ZMK_MACRO(mcr_AEc,
             wait-ms = <40>;
             tap-ms = <40>;
             bindings
@@ -28,7 +28,7 @@
                 ;
         )
 
-        ZMK_MACRO(mcr_OE,
+        ZMK_MACRO(mcr_OEc,
             wait-ms = <40>;
             tap-ms = <40>;
             bindings
@@ -38,7 +38,7 @@
                 ;
         )
 
-        ZMK_MACRO(mcr_UE,
+        ZMK_MACRO(mcr_UEc,
             wait-ms = <40>;
             tap-ms = <40>;
             bindings
@@ -124,21 +124,21 @@
             td_comma: mod_AE {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
-                bindings = <&mcr_ae>, <&mcr_AE>;
+                bindings = <&mcr_ae>, <&mcr_AEc>;
                 mods = <MOD_LSFT>;
             };
 
             td_comma: mod_OE {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
-                bindings = <&mcr_oe>, <&mcr_OE>;
+                bindings = <&mcr_oe>, <&mcr_OEc>;
                 mods = <MOD_LSFT>;
             };
 
             td_comma: mod_OE {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
-                bindings = <&mcr_oe>, <&mcr_OE>;
+                bindings = <&mcr_oe>, <&mcr_OEc>;
                 mods = <MOD_LSFT>;
             };
         };
