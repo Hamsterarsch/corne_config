@@ -12,7 +12,13 @@
     chain-length = <6>;
 };
 
+    &soft_off {
+        hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
+};
+
 / {
+
+
      behaviors {
             td_shftl: tap_dance_shiftlock {
                 compatible = "zmk,behavior-tap-dance";
@@ -63,12 +69,12 @@
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+// |  OFF |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  DEL |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |  UP |     |     |      |
 // |      |     |     |     |  M  | ESC |   |     | LFT | DWN | RHT |     |      |
 //                    |     |     |     |   |  ALT|     |     |
                         bindings = <
-   &trans     &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8    &kp N9    &kp N0 &kp BSPC
+   &soft_off  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8    &kp N9    &kp N0 &kp DEL
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans   &trans   &kp UP    &trans    &trans &trans
    &trans     &trans       &trans       &trans       &kp M        &kp ESC        &trans   &kp LEFT &kp DOWN  &kp RIGHT &trans &trans
                                         &trans       &kp SPACE    &trans         &kp RALT &kp RET  &trans
@@ -77,12 +83,12 @@
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |     |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+// |     |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |      |
 // |     |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
 // |     |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                   |     |     |     |   | ALT |     |     |
                         bindings = <
-   &trans &kp EXCL &kp AT &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp DEL
+   &trans &kp EXCL &kp AT &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
    &trans &trans   &trans &trans    &trans    &trans      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
    &trans &trans   &trans &trans    &trans    &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
                           &trans    &kp SPACE &trans      &kp RALT  &kp RET   &trans
