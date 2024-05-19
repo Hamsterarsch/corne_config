@@ -69,13 +69,13 @@
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |  OFF |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  DEL |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |  UP |     |     |      |
+// |  OFF |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |  UP |     |     | DEL  |
 // |      |     |     |     |  M  | ESC |   |     | LFT | DWN | RHT |     |      |
 //                    |     |     |     |   |  ALT|     |     |
                         bindings = <
-   &soft_off  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8    &kp N9    &kp N0 &kp DEL
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans   &trans   &kp UP    &trans    &trans &trans
+   &soft_off  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8    &kp N9    &kp N0 &trans
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans   &trans   &kp UP    &trans    &trans &kp DEL
    &trans     &trans       &trans       &trans       &kp M        &kp ESC        &trans   &kp LEFT &kp DOWN  &kp RIGHT &trans &trans
                                         &trans       &kp SPACE    &trans         &kp RALT &kp RET  &trans
                         >;
