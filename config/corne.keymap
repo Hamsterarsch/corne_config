@@ -155,34 +155,34 @@
    &kp ESC   &kp Q &kp W &kp E     &kp R &kp T             &kp Z      &kp U   &td_i     &kp O     &kp P    &kp BSPC
    &sl 3     &kp A &kp S &kp D     &kp F &kp G             &kp H      &td_j   &td_k     &td_l     &kp SEMI &kp SQT
    &sk LCTRL &kp Y &kp X &kp C     &kp V &kp B             &kp N      &kp M   &kp FSLH  &kp COMMA &kp DOT  &kp LGUI
-                   &sl 1 &kp SPACE &mt sk LSHIFT CAPS      &kp TAB    &kp RET &sl 2
+                   &sl 1 &kp SPACE &mt <sk LSHIFT> CAPS    &kp TAB    &kp RET &sl 2
                         >;
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |  OFF |  1  |  2  |  3  |  4  |  5  |   |     |     | UP  |     |     |      |
-// |      | 6   | 7   | 8   |   9 |   0 |   | HOME|  LFT| DWN |  RGT|  END| DEL  |
-// | BTCLR| BT1 | BT2 | BT3 |     | M   |   |     |     |     |     |     |      |
-//                    |     |     |     |   |     |     |     |
+// |     |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |      |
+// | ALTR|  1  |  2  |  3  |  4  |  5  |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+// |  M  | 6   | 7   | 8   |   9 |   0 |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+//                   |     |     |     |   | ALT |     |     |
                         bindings = <
-   &soft_off    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &trans   &trans   &kp UP    &kp N9    &kp N0   &trans
-   &kp RALT     &kp N6       &kp N7       &kp N8       &kp N9       &kp N0         &kp HOME &kp LEFT &kp DOWN  &RIGHT    &kp END  &kp DEL
-   &&bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans        &kp           &trans   &trans   &trans    &trans    &trans   &trans
-                                          &trans       &kp SPACE    &trans         &trans   &kp RET  &trans
+   &trans &kp EXCL &kp AT &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
+   &kp RALT  &kp N1   &kp N2 &kp N3    &kp N     &kp N5      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
+   &kp M     &kp N6   &kp N7 &kp N8    &kp N9    &kp N0      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
+                          &trans    &kp SPACE &trans      &kp RALT  &kp RET   &trans
                         >;
                 };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |     |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |      |
-// |     |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// |     |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                   |     |     |     |   | ALT |     |     |
+// |  OFF |     |     |     |     |     |   |     | BSPC| UP  | DEL |     |      |
+// |      |     |     |     |     |     |   | HOME|  LFT| DWN |  RGT|  END| DEL  |
+// | BTCLR| BT1 | BT2 | BT3 |     |     |   |     |     |     |     |     |      |
+//                    |     |     |     |   |     |     |     |
                         bindings = <
-   &trans &kp EXCL &kp AT &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
-   &trans &trans   &trans &trans    &trans    &trans      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
-   &trans &trans   &trans &trans    &trans    &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
-                          &trans    &kp SPACE &trans      &kp RALT  &kp RET   &trans
+   &soft_off    &kp N1       &kp N2       &kp N3       &kp N4        &kp N5          &trans   &kp BSPC &kp UP    &kp DEL   &kp trans &trans
+   &kp RALT     &kp N6       &kp N7       &kp N8       &kp N9        &kp N0          &kp HOME &kp LEFT &kp DOWN  &RIGHT    &kp END   &kp DEL
+   &&bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &&bt BT_SEL 3 &bt BT_SEL 4    &trans   &trans   &trans    &trans    &trans    &trans
+                                          &trans       &kp SPACE     &trans          &trans   &kp RET  &trans
                         >;
                 };
 
