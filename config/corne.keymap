@@ -183,14 +183,14 @@
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |  OFF |     |     |     |     |     |   |     | BSPC| UP  | DEL |     |      |
-// |      |     |     |     |     |     |   | HOME|  LFT| DWN |  RGT|  END| DEL  |
-// | BTCLR| BT1 | BT2 | BT3 |     |     |   |     |     |     |     |     |      |
-//                    |     |     |     |   |     |     |     |
+// |  OFF |     |     |     |     |     |       |     | BSPC| UP  | DEL |     |      |
+// |      |     |     |     |     |     |       | HOME|  LFT| DWN |  RGT|  END| DEL  |
+// | BTCLR| BT1 | BT2 | BT3 |  BT4| BT5 |       |     |     |     |     |     |     |      |
+//                    |     |     |     |       |     |     |     |
                         bindings = <
    &soft_off    &kp N1       &kp N2       &kp N3       &kp N4        &kp N5          &trans   &kp BSPC &kp UP    &kp DEL   &trans    &trans
    &kp RALT     &kp N6       &kp N7       &kp N8       &kp N9        &kp N0          &kp HOME &kp LEFT &kp DOWN  &kp RIGHT &kp END   &kp DEL
-   &&bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &&bt BT_SEL 3 &bt BT_SEL 4    &trans   &trans   &trans    &trans    &trans    &trans
+   &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4    &trans   &trans   &trans    &trans    &trans    &trans
                                           &trans       &kp SPACE     &trans          &trans   &kp RET  &trans
                         >;
                 };
