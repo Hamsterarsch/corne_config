@@ -1,4 +1,4 @@
-/*
+                                                                                                                                                                        /*
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
@@ -162,8 +162,8 @@
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E     &kp R &kp T             &kp Z      &kp U   &td_i     &kp O     &kp P    &kp BSPC
    &sl 3     &kp A &kp S &kp D     &kp F &kp G             &kp H      &td_j   &td_k     &td_l     &kp SEMI &kp SQT
-   &sk LCTRL &kp Y &kp X &kp C     &kp V &kp B             &kp N      &kp M   &kp FSLH  &kp COMMA &kp DOT  &kp LGUI
-                   &sl 1 &kp SPACE &tap_shft               &kp TAB    &kp RET &sl 2
+   &tap_shft &kp Y &kp X &kp C     &kp V &kp B             &kp N      &kp M   &kp FSLH  &kp COMMA &kp DOT  &kp LGUI
+                   &sl 1 &kp SPACE &sk LCTRL               &kp TAB    &kp RET &sl 2
                         >;
                 };
                 lower_layer {
