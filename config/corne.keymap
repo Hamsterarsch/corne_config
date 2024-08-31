@@ -213,7 +213,7 @@
                         bindings = <
    &kp GRAVE &kp EXCL &kp RA(Q) &kp BSLH  &kp DLLR  &kp PRCNT   &kp CARET &kp RBRC  &kp ASTRK &kp LPAR    &trans        &trans
    &kp LALT  &kp N1   &kp N2    &kp N3    &kp N4    &kp N5      &kp SLASH &kp RPAR  &kp RA(N8) &kp RA(N9) &kp RA(MINUS) &kp PLUS
-   &kp M     &kp N6   &kp N7    &kp N8    &kp N9    &kp N0      &kp QMARK &kp RBKT  &kp RA(N7) &kp RA(N0) &kp RA(LT)    &kp RA(PLUS)
+   &kp M     &kp N6   &kp N7    &kp N8    &kp N9    &kp N0      &kp QMARK &kp RBKT  &kp RA(N7) &kp RA(N0) &kp RA(PIPE)  &kp RA(RBKT)
                                 &trans    &kp SPACE &trans      &kp RALT  &kp RET   &trans
                         >;
                 };
