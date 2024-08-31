@@ -162,7 +162,7 @@
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp BSLH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
             };
 
             com_imp: comma_impostor {
@@ -170,7 +170,7 @@
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp PIPE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
             };
 
             semi_imp: semicolon_impostor {
