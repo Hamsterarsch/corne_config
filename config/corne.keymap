@@ -149,6 +149,13 @@
             tapping-term-ms = <180>;
             bindings = <&sk LSHFT>, <&kp CAPS>;
             };
+
+            slash_imp: slash_impostor {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp AMPS>, <&kp UNDER>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
         };
         keymap {
                 compatible = "zmk,keymap";
@@ -160,9 +167,9 @@
 // | CTRK |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | LGUI |
 //                    |  L1 | SPC | SHFT|   | ALT | ENT  | L2 |
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp E     &kp R &kp T             &kp Z      &kp U   &kp I    &kp O     &kp P    &kp BSPC
-   &sl 3     &kp A &kp S &kp D     &kp F &kp G             &kp H      &kp J   &kp K     &kp L     &kp SEMI &kp SQT
-   &tap_shft &kp Y &kp X &kp C     &kp V &kp B             &kp N      &kp M   &kp FSLH  &kp COMMA &kp DOT  &kp LGUI
+   &kp ESC   &kp Q &kp W &kp E     &kp R &kp T             &kp Y      &kp U   &kp I       &kp O     &kp P    &kp BSPC
+   &sl 3     &kp A &kp S &kp D     &kp F &kp G             &kp H      &kp J   &kp K       &kp L     &kp SEMI &kp SQT
+   &tap_shft &kp Z &kp X &kp C     &kp V &kp B             &kp N      &kp M   &slash_imp  &kp COMMA &kp DOT  &kp LGUI
                    &sl 1 &kp SPACE &sk LCTRL               &kp TAB    &kp RET &sl 2
                         >;
                 };
@@ -201,10 +208,10 @@
 // |     |     |     |     |     |     |   |     |     |     |     |     |      |
 //                   |     |     |     |   |     |     |     |
                         bindings = <
-   &trans &trans   &trans  &trans    &trans    &trans      &trans &mod_UE &trans  &mod_OE &trans  &trans
-   &trans &mod_AE  &mcr_ss &trans    &trans    &trans      &trans &trans  &trans  &trans  &trans  &trans
-   &kp F1 &kp F2   &kp F3  &kp F4    &kp F5    &kp F6      &kp F7 &kp F8  &kp F9  &kp F10 &kp F11 &kp F12
-                           &trans    &trans    &trans      &trans &trans  &trans
+   &trans &trans   &trans  &trans    &trans    &trans      &trans &kp LBKT &trans  &kp SEMI &trans  &trans
+   &trans &kp SQT  &mcr_ss &trans    &trans    &trans      &trans &trans   &trans  &trans   &trans  &trans
+   &kp F1 &kp F2   &kp F3  &kp F4    &kp F5    &kp F6      &kp F7 &kp F8   &kp F9  &kp F10  &kp F11 &kp F12
+                           &trans    &trans    &trans      &trans &trans   &trans
                         >;
                 };
         };
