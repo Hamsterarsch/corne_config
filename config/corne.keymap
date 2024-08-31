@@ -206,14 +206,14 @@
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |     |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |      |
+// |     |  !  |  @  |  #  |  $  |  %  |   |  &  |  *  |  (  |  )  |     |      |
 // | ALTR|  1  |  2  |  3  |  4  |  5  |   |  -  |  =  |  [  |  ]  |  \  |  `   |
 // |  M  | 6   | 7   | 8   |   9 |   0 |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                   |     |     |     |   | ALT |     |     |
                         bindings = <
-   &trans    &kp EXCL &kp RA(Q) &kp BSLH  &kp DLLR  &kp PRCNT   &kp GRAVE &kp CARET &kp LBRC  &kp ASTRK &kp LPAR      &trans
-   &kp LALT  &kp N1   &kp N2    &kp N3    &kp N4    &kp N5      &kp SLASH &kp RPAR  &kp RA(8) &kp RA(9) &kp RA(MINUS) &kp PLUS
-   &kp M     &kp N6   &kp N7    &kp N8    &kp N9    &kp N0      &kp QMARK &kp RBKT  &kp RA(7) &kp RA(0) &kp RA(LT)    &kp RA(PLUS)
+   &kp GRAVE &kp EXCL &kp RA(Q) &kp BSLH  &kp DLLR  &kp PRCNT   &kp CARET &kp RBRC  &kp ASTRK &kp LPAR    &trans        &trans
+   &kp LALT  &kp N1   &kp N2    &kp N3    &kp N4    &kp N5      &kp SLASH &kp RPAR  &kp RA(N8) &kp RA(N9) &kp RA(MINUS) &kp PLUS
+   &kp M     &kp N6   &kp N7    &kp N8    &kp N9    &kp N0      &kp QMARK &kp RBKT  &kp RA(N7) &kp RA(N0) &kp RA(LT)    &kp RA(PLUS)
                                 &trans    &kp SPACE &trans      &kp RALT  &kp RET   &trans
                         >;
                 };
