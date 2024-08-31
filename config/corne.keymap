@@ -156,6 +156,37 @@
             bindings = <&kp AMPS>, <&kp UNDER>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             };
+
+            dot_imp: dot_impostor {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp BSLH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <MOD_LSFT|MOD_RSFT)>;
+            };
+
+            com_imp: comma_impostor {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp PIPE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <MOD_LSFT|MOD_RSFT)>;
+            };
+
+            semi_imp: semicolon_impostor {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LT>, <&kp GT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+
+            sqt_imp: sqt_impostor {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp PIPE>, <&kp AT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+
         };
         keymap {
                 compatible = "zmk,keymap";
@@ -167,9 +198,9 @@
 // | CTRK |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | LGUI |
 //                    |  L1 | SPC | SHFT|   | ALT | ENT  | L2 |
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp E     &kp R &kp T             &kp Y      &kp U   &kp I       &kp O     &kp P    &kp BSPC
-   &sl 3     &kp A &kp S &kp D     &kp F &kp G             &kp H      &kp J   &kp K       &kp L     &kp SEMI &kp SQT
-   &tap_shft &kp Z &kp X &kp C     &kp V &kp B             &kp N      &kp M   &slash_imp  &kp COMMA &kp DOT  &kp LGUI
+   &kp ESC   &kp Q &kp W &kp E     &kp R &kp T             &kp Y      &kp U   &kp I       &kp O     &kp P     &kp BSPC
+   &sl 3     &kp A &kp S &kp D     &kp F &kp G             &kp H      &kp J   &kp K       &kp L     &semi_imp &sqt_imp
+   &tap_shft &kp Z &kp X &kp C     &kp V &kp B             &kp N      &kp M   &slash_imp  &com_imp  &dot_imp  &kp LGUI
                    &sl 1 &kp SPACE &sk LCTRL               &kp TAB    &kp RET &sl 2
                         >;
                 };
@@ -180,10 +211,10 @@
 // |  M  | 6   | 7   | 8   |   9 |   0 |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                   |     |     |     |   | ALT |     |     |
                         bindings = <
-   &trans    &kp EXCL &kp AT &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
-   &kp LALT  &kp N1   &kp N2 &kp N3    &kp N4    &kp N5      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
-   &kp M     &kp N6   &kp N7 &kp N8    &kp N9    &kp N0      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
-                          &trans       &kp SPACE &trans      &kp RALT  &kp RET   &trans
+   &trans    &kp EXCL &kp RA(Q) &kp BSLH  &kp DLLR  &kp PRCNT   &kp GRAVE &kp CARET &kp LBRC  &kp ASTRK &kp LPAR      &trans
+   &kp LALT  &kp N1   &kp N2    &kp N3    &kp N4    &kp N5      &kp SLASH &kp RPAR  &kp RA(8) &kp RA(9) &kp RA(MINUS) &kp PLUS
+   &kp M     &kp N6   &kp N7    &kp N8    &kp N9    &kp N0      &kp QMARK &kp RBKT  &kp RA(7) &kp RA(0) &kp RA(LT)    &kp RA(PLUS)
+                                &trans    &kp SPACE &trans      &kp RALT  &kp RET   &trans
                         >;
                 };
 
@@ -208,10 +239,10 @@
 // |     |     |     |     |     |     |   |     |     |     |     |     |      |
 //                   |     |     |     |   |     |     |     |
                         bindings = <
-   &trans &trans   &trans  &trans    &trans    &trans      &trans &kp LBKT &trans  &kp SEMI &trans  &trans
-   &trans &kp SQT  &mcr_ss &trans    &trans    &trans      &trans &trans   &trans  &trans   &trans  &trans
-   &kp F1 &kp F2   &kp F3  &kp F4    &kp F5    &kp F6      &kp F7 &kp F8   &kp F9  &kp F10  &kp F11 &kp F12
-                           &trans    &trans    &trans      &trans &trans   &trans
+   &trans &trans   &trans    &trans    &trans    &trans      &trans &kp LBKT &trans  &kp SEMI &trans  &trans
+   &trans &kp SQT  &kp MINUS &trans    &trans    &trans      &trans &trans   &trans  &trans   &trans  &trans
+   &kp F1 &kp F2   &kp F3    &kp F4    &kp F5    &kp F6      &kp F7 &kp F8   &kp F9  &kp F10  &kp F11 &kp F12
+                             &trans    &trans    &trans      &trans &trans   &trans
                         >;
                 };
         };
