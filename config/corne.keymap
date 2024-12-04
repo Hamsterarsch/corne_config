@@ -220,28 +220,28 @@
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |  OFF | ousb| oble|     |     |     |       |     | BSPC| UP  | DEL |     |      |
+// |  OFF | ousb| oble|     |     |     |       |     | BSPC| UP  | DEL |     | OFF  |
 // |      |     |     |     |     |     |       | HOME|  LFT| DWN |  RGT|  END| DEL  |
 // |      | BT1 | BT2 | BT3 |  BT4| BT5 |       |BTCLR|     |     |     |     |      |      
 //                    |     |     |     |       |     |     |     |
                         bindings = <
-   &soft_off    &out OUT_USB &out OUT_BLE &kp N3       &kp N4        &kp N5          &trans      &kp BSPC &kp UP    &kp DEL   &trans    &trans
+   &soft_off    &out OUT_USB &out OUT_BLE &kp N3       &kp N4        &kp N5          &trans      &kp BSPC &kp UP    &kp DEL   &trans    &soft_off
    &kp RALT     &kp N6       &kp N7       &kp N8       &kp N9        &kp N0          &kp HOME    &kp LEFT &kp DOWN  &kp RIGHT &kp END   &kp DEL
    &trans       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_CLR  &trans   &trans    &trans    &trans    &trans
-                                          &trans       &kp SPACE     &trans      &trans          &kp RET  &trans
+                                          &trans       &kp SPACE     &trans          &trans      &kp RET  &trans
                         >;
                 };
 
                 alt_layer {
 // -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |     |   |     |  ue |     | oe  |     |      |
+// | OFF |     |     |     |     |     |   |     |  ue |     | oe  |     |      |
 // |     |   ae|  ss |     |     |     |   |     |     |     |     |     |      |
 // |     |     |     |     |     |     |   |     |     |     |     |     |      |
 //                   |     |     |     |   |     |     |     |
                         bindings = <
-   &trans &trans   &trans    &trans    &trans    &trans      &trans &kp LBKT &trans  &kp SEMI &trans  &trans
-   &trans &kp SQT  &kp MINUS &trans    &trans    &trans      &trans &trans   &trans  &trans   &trans  &trans
-   &kp F1 &kp F2   &kp F3    &kp F4    &kp F5    &kp F6      &kp F7 &kp F8   &kp F9  &kp F10  &kp F11 &kp F12
+   &soft_off &trans   &trans    &trans    &trans    &trans      &trans &kp LBKT &trans  &kp SEMI &trans  &trans
+   &trans    &kp SQT  &kp MINUS &trans    &trans    &trans      &trans &trans   &trans  &trans   &trans  &trans
+   &kp F1    &kp F2   &kp F3    &kp F4    &kp F5    &kp F6      &kp F7 &kp F8   &kp F9  &kp F10  &kp F11 &kp F12
                              &trans    &trans    &trans      &trans &trans   &trans
                         >;
                 };
