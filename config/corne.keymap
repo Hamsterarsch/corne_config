@@ -161,16 +161,16 @@
             dot_imp: dot_impostor {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp LT>;
+            bindings = <&kp DOT>, <&kp CARET>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
             };
 
             com_imp: comma_impostor {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp LT>;
+            bindings = <&kp COMMA>, <&kp CARET>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
             };
 
             semi_imp: semicolon_impostor {
