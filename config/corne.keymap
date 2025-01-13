@@ -1,4 +1,4 @@
-                                                                                                                                                                        /*
+dc                                                                                                                                                                        /*
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
@@ -161,15 +161,15 @@
             dot_imp: dot_impostor {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp CARET>;
+            bindings = <&kp DOT>, <&kp NUBS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT)>;
             };
 
             com_imp: comma_impostor {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp CARET>;
+            bindings = <&kp COMMA>, <&kp NUBS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             };
 
