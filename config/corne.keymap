@@ -194,9 +194,9 @@
                 default_layer {
 // -----------------------------------------------------------------------------------------
 // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | TAB  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | L3   |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | CTRK |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | LGUI |
-//                    |  L1 | SPC | SHFT|   | ALT | ENT  | L2 |
+//                    |  L1 | SPC | SHFT|   | TAB | ENT  | L2 |
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E     &kp R &kp T             &kp Y      &kp U   &kp I       &kp O     &kp P     &kp BSPC
    &sl 3     &kp A &kp S &kp D     &kp F &kp G             &kp H      &kp J   &kp K       &kp L     &semi_imp &sqt_imp
@@ -206,15 +206,15 @@
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |     |  !  |  @  |  #  |  $  |  %  |   |  &  |  *  |  (  |  )  |     |      |
-// | ALTR|  1  |  2  |  3  |  4  |  5  |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+// |  ^  |  !  |  @  |  #  |  $  |  %  |   |  &  |  *  |  (  |  )  |     |      |
+// | ALT |  1  |  2  |  3  |  4  |  5  |   |  -  |  =  |  [  |  ]  |  \  |  `   |
 // |  M  | 6   | 7   | 8   |   9 |   0 |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                   |     |     |     |   | ALT |     |     |
+//                   |     |     |     |   | ALTR|     |     |
                         bindings = <
    &kp GRAVE &kp EXCL &kp RA(Q) &kp BSLH  &kp DLLR  &kp PRCNT   &kp CARET &kp RBRC  &kp ASTRK &kp LPAR    &trans        &trans
-   &kp LALT  &kp N1   &kp N2    &kp N3    &kp N4    &kp N5      &kp SLASH &kp RPAR  &kp RA(N8) &kp RA(N9) &kp RA(MINUS) &kp PLUS
-   &kp M     &kp N6   &kp N7    &kp N8    &kp N9    &kp N0      &kp QMARK &kp RBKT  &kp RA(N7) &kp RA(N0) &kp RA(LT)    &kp RA(RBKT)
-                                &trans    &kp SPACE &trans      &kp RALT  &kp RET   &trans
+   &sk LALT  &kp N1   &kp N2    &kp N3    &kp N4    &kp N5      &kp SLASH &kp RPAR  &kp RA(N8) &kp RA(N9) &kp RA(MINUS) &kp PLUS
+   &kp M     &kp N6   &kp N7    &kp N8    &kp N9    &kp N0      &kp QMARK &kp RBKT  &kp RA(N7) &kp RA(N0) &kp RA(NUBS)  &kp TILDE
+                                &trans    &kp SPACE &trans      &sk RALT  &kp RET   &trans
                         >;
                 };
 
@@ -236,7 +236,7 @@
 // -----------------------------------------------------------------------------------------
 // | OFF |     |     |     |     |     |   |     |  ue |     | oe  |     |      |
 // |     |   ae|  ss |     |     |     |   |     |     |     |     |     |      |
-// |     |     |     |     |     |     |   |     |     |     |     |     |      |
+// |  F1 | F2  | F3  | F4  | F5  | F6  |   | F7  | F8  | F9  | F10 | F11 |  F12 |
 //                   |     |     |     |   |     |     |     |
                         bindings = <
    &soft_off &trans   &trans    &trans    &trans    &trans      &trans &kp LBKT &trans  &kp SEMI &trans  &trans
